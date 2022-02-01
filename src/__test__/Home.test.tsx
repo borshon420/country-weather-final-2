@@ -7,3 +7,15 @@ test('renders learn react link', () => {
   const home = screen.getByTestId("home");
   expect(home).toBeInTheDocument();
 });
+
+test('renders learn react input', () => {
+  render(<Home />);
+  const input = screen.getByTestId("input");
+  expect(input).toBeInTheDocument();
+});
+
+test('renders learn react button', () => {
+  render(<Home />);
+  const button = screen.getByTestId("button");
+  expect(button).toBeInTheDocument();
+});

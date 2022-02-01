@@ -14,3 +14,26 @@ test('renders learn react link', () => {
   const country = screen.getByTestId("country");
   expect(country).toBeInTheDocument();
 });
+
+test('renders learn react country-info', () => {
+    const history = createMemoryHistory();
+    history.push('country')
+  render(<Router history={history}>
+      <CountryInfo />
+  </Router>);
+  const country = screen.getByTestId("country-info");
+  expect(country).toBeInTheDocument();
+});
+
+test('renders learn react country-button', () => {
+    const history = createMemoryHistory();
+    history.push('country')
+  render(<Router history={history}>
+      <CountryInfo />
+  </Router>);
+  const country = screen.getByTestId("country-button");
+  expect(country).toBeInTheDocument();
+});
+
+
+

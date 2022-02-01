@@ -52,16 +52,18 @@ const CountryInfo: React.FC = () => {
         <div data-testid="country">
             <h2>This is country info</h2>
             <div>
-                <div>
+                <div data-testid="country-info">
                     <p>Capital: {country?.capital[0]}</p>
                     <p>population: {country?.population}</p>
                     <p>Latitude: {country?.latlng[0]}<sup>o</sup></p>
                     <p>Longitude: {country?.latlng[1]}<sup>o</sup></p>
                     <img style={{width: "25%"}} src={country?.flags.svg} alt="" />
                 </div>
-                <Button onClick={getWeather} variant="contained">Capital Weather</Button>
+                <Button 
+                data-testid="country-button"
+                onClick={getWeather} variant="contained">Capital Weather</Button>
             </div>
-            {weather && <div>
+            {weather && <div data-testid="weather-info">
                 <p>Temperature: {weather?.temperature}<sup>o</sup></p>
                 <p>Wind_Speed: {weather?.wind_speed}<sup>o</sup></p>
                 <p>Precip: {weather?.precip}<sup>o</sup></p>

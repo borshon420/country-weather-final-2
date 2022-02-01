@@ -20,6 +20,7 @@ const Home: React.FC = () => {
             <h2>This is homeis</h2>
             <div>
                 <TextField
+                    data-testid="input"
                     value={countryName}
                     onChange={handleInputChange}
                     placeholder="Enter Country"
@@ -27,7 +28,9 @@ const Home: React.FC = () => {
                     sx={{width: "25%" , mb: 3}}
                 />
             </div>
-            <Button disabled={!countryName} variant="contained" sx={{width: "25%"}} size="large" onClick={getCountry}>Submit</Button>
+            <Button
+                data-testid="button"
+            disabled={!countryName} variant="contained" sx={{width: "25%"}} size="large" onClick={getCountry}>Submit</Button>
         </div>
     );
 };
